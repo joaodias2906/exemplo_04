@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 1 exemplo 04</title>
+</head>
+<body>
+
+    <h1>Classificação de Nadadores</h1>
+    
+    <form action="/resul" method="post">
+        <label for="resul">Digite qual é o resul:</label> <br>
+        <input type="text" name="resul" id="resul" value="<%= valores.resul %>"> <br>
+        <button type="submit">classificar</button>
+     </form>
+
+    <% 
+     if(resultado){
+        // com dados de retorno
+        %>
+        <h2>Categoria: <%= resultado.resul %></h2>
+        <%
+     }else{
+        //sem dados de retorno
+        %>
+            <h2>Não temos retorno</h2>
+        <%
+     }
+    %>
+
+
+</body>
+</html>
